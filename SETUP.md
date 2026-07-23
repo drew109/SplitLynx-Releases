@@ -172,6 +172,22 @@ Check that the server is connected, the correct Tasks are enabled, and the
 scanner has had time to refresh. The market can be closed and there may be no
 qualifying filing. Do not create a manual trade only to test a live account.
 
+### Install Update does nothing on Windows
+
+SplitLynx 1.3.37 and newer shows download and verification progress, closes
+only after the update is ready, installs it, then reopens with a green
+**Successfully updated** message.
+
+Version 1.3.36 had a broken installer handoff. If it says the update was
+scheduled but the app stays open:
+
+1. Open the [latest release](https://github.com/drew109/SplitLynx-Releases/releases/latest).
+2. Download the newest `SplitLynx-<version>-Setup.exe`.
+3. Close SplitLynx and run the downloaded Setup EXE.
+4. Open SplitLynx again and confirm the newer version is shown.
+
+This manual installation is needed only once to leave version 1.3.36.
+
 ### Something still does not work
 
 1. Press **Log** in the sidebar.

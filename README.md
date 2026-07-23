@@ -40,6 +40,18 @@ Continue with the complete non-technical instructions in
 accounts, MFA/CAPTCHA, starting the scanner, approving a trade, and fixing
 common setup problems.
 
+## Automatic updates
+
+SplitLynx 1.3.37 and newer checks for updates when it opens. On Windows, choose
+**Install Update** to download and verify the package while a progress bar is
+shown. SplitLynx closes only after the package is ready, installs it, reopens
+automatically, and shows a green **Successfully updated** message.
+
+Version 1.3.36 had a broken installer handoff. If 1.3.36 says an update was
+scheduled but does not close, download the latest Windows Setup EXE from this
+repository and run it once. Automatic updates work normally after 1.3.37 is
+installed.
+
 ## Important Mac note
 
 The current Mac packages are unsigned test builds. macOS may require
