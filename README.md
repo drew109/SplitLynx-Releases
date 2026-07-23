@@ -1,18 +1,57 @@
 # SplitLynx Downloads
 
-This public repository contains customer installers only. The SplitLynx source
-code and release tooling remain private.
+This is the official public download page for SplitLynx. It contains compiled
+installers only; the source code and release tools remain private.
 
-Download the newest version from the
-[latest release](https://github.com/drew109/SplitLynx-Releases/releases/latest):
+## Download
 
-- **Windows:** `SplitLynx-<version>-Setup.exe`
-- **Apple silicon Mac (M1/M2/M3/M4/M5):** the `macos-arm64` DMG
-- **Intel Mac:** the `macos-x64` DMG
+Open the [latest release](https://github.com/drew109/SplitLynx-Releases/releases/latest)
+and choose exactly one file:
 
-The current Mac packages are unsigned test builds. macOS may require the user
-to Control-click the app and choose **Open**. Use a test account first and
-review every pending trade before approval.
+| Computer | File to download |
+| --- | --- |
+| Windows 10 or 11, 64-bit | `SplitLynx-<version>-Setup.exe` |
+| Mac with an Apple M1, M2, M3, M4, or M5 chip | `macos-arm64` DMG |
+| Older Mac with an Intel processor | `macos-x64` DMG |
 
-Support logs intentionally redact saved passwords, tokens, account numbers,
-emails, and local identifiers.
+On a Mac, choose **Apple menu > About This Mac**. If **Chip** starts with
+`Apple M`, use ARM64. If **Processor** says `Intel`, use x64.
+
+## What must already be ready
+
+- A SplitLynx license key from the owner.
+- A reliable internet connection.
+- The latest [Google Chrome](https://www.google.com/chrome/) installed normally.
+- Brokerage login details, account number, and access to any MFA or CAPTCHA.
+
+Python, Git, Node.js, command-line tools, and separate dependency folders are
+**not required**. Everything except Chrome is bundled in the installer/app.
+
+## Install and start
+
+- **Windows:** download the Setup EXE, double-click it, finish the installer,
+  then open the new SplitLynx Desktop or Start-menu shortcut.
+- **Mac:** download the correct DMG, open it, drag `SplitLynx.app` into
+  **Applications**, eject the DMG, then Control-click SplitLynx in Applications
+  and choose **Open** for the first launch.
+
+Continue with the complete non-technical instructions in
+**[SETUP.md](SETUP.md)**. They cover activation, Chrome, adding brokerage
+accounts, MFA/CAPTCHA, starting the scanner, approving a trade, and fixing
+common setup problems.
+
+## Important Mac note
+
+The current Mac packages are unsigned test builds. macOS may require
+**System Settings > Privacy & Security > Open Anyway** after the first launch
+attempt. Do not disable Gatekeeper and do not run Terminal commands.
+
+Use a test or low-risk account first. Always read the symbol, brokerage,
+quantity, and price in **Pending Approval** before pressing **Accept**.
+
+## Support
+
+Press **Log** in the SplitLynx sidebar and briefly describe what happened. The
+report is sanitized before upload and provides a `TSLOG` reference for support.
+Saved passwords, license keys, tokens, emails, account numbers, and balances are
+excluded.
