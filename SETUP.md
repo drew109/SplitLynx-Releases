@@ -96,6 +96,11 @@ Reinstalling the app will not move a key to a different computer.
 6. Save the task and make sure its **Enabled** switch is on.
 7. Repeat these steps for each brokerage account you want SplitLynx to check.
 
+On Mac, live login/holdings/order adapters are currently included for BBAE,
+Chase, dSPAC, Fennel, Public, Robinhood, SoFi, and Tradier. WellsTrade supports
+login and holdings only. Citi, Fidelity, Firstrade, Plynk, Schwab, Tastytrade,
+and Webull show **use Windows** instead of pretending a Mac trade can run.
+
 Saved passwords are protected by the current Windows account on Windows and by
 macOS Keychain on Mac. Never send a password or MFA code in a support log.
 
@@ -121,10 +126,24 @@ sign in to the brokerage normally, clear any security alert, and try
    **Pending Approval**; an empty list can simply mean there is no qualifying
    reverse-split trade at that moment.
 
-SplitLynx monitors reverse-stock-split round-up opportunities only. It does not
-automatically submit a candidate merely because the scanner finds one.
+SplitLynx monitors reverse-stock-split round-up opportunities only.
 
-### 5. Review before accepting
+### Manual Confirmation controls live submission
+
+- **On:** broker-routable candidates stay in **Pending Approval** until you
+  select them and choose **Accept**.
+- **Off:** pressing **Start** is permission to submit eligible pending and newly
+  delivered Buy or Sell cards automatically after the per-account ownership,
+  availability, duplicate-order, and route checks pass.
+- Review-only filings always stay in **Pending Approval**, even when Manual
+  Confirmation is off.
+- Post-split exits keep checking only the exact unresolved account. A submitted
+  account is not sent twice; missing, failed, or ambiguous results stay pending.
+
+Leave Manual Confirmation on unless you intend **Start** to place eligible live
+orders without another Accept click.
+
+### 5. Review before accepting or enabling automatic mode
 
 Before choosing **Accept**, verify every item:
 
@@ -174,9 +193,11 @@ qualifying filing. Do not create a manual trade only to test a live account.
 
 ### Install Update does nothing on Windows
 
-SplitLynx 1.3.37 and newer shows download and verification progress, closes
-only after the update is ready, installs it, then reopens with a green
-**Successfully updated** message.
+SplitLynx 1.3.53 and newer uses signed differential updates, so unchanged app
+files are reused instead of downloading the full package each time. It shows
+download size, speed, ETA, verification progress, closes only after the update
+is ready, installs it, then reopens with a green **Successfully updated**
+message.
 
 Version 1.3.36 had a broken installer handoff. If it says the update was
 scheduled but the app stays open:

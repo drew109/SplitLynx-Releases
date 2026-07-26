@@ -42,10 +42,11 @@ common setup problems.
 
 ## Automatic updates
 
-SplitLynx 1.3.37 and newer checks for updates when it opens. On Windows, choose
-**Install Update** to download and verify the package while a progress bar is
-shown. SplitLynx closes only after the package is ready, installs it, reopens
-automatically, and shows a green **Successfully updated** message.
+SplitLynx checks for updates when it opens. On Windows 1.3.53 and newer, choose
+**Install Update** to download only the changed signed files while size, speed,
+ETA, and verification progress are shown. SplitLynx closes only after the
+update is ready, installs it, reopens automatically, and shows a green
+**Successfully updated** message.
 
 Version 1.3.36 had a broken installer handoff. If 1.3.36 says an update was
 scheduled but does not close, download the latest Windows Setup EXE from this
@@ -60,6 +61,10 @@ attempt. Do not disable Gatekeeper and do not run Terminal commands.
 
 Use a test or low-risk account first. Always read the symbol, brokerage,
 quantity, and price in **Pending Approval** before pressing **Accept**.
+
+On Mac, live trading is implemented for BBAE, Chase, dSPAC, Fennel, Public,
+Robinhood, SoFi, and Tradier. WellsTrade is login/holdings only. Brokers labeled
+**use Windows** do not have a Mac trading adapter and are safely blocked.
 
 ## Support
 
